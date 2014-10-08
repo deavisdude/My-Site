@@ -1,44 +1,247 @@
-<!DOCTYPE html>
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <title>Davis Odom</title>
+  <meta name="description" content="I am a student/software developer from Marietta, GA with experience in multiple languages in many applications.
+  I have worked on apps, games, and even robots! You can see some of my work on my portfolio page. I focus primarily on making video games, 
+  but I love to create things and often work on projects that are totally different.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes" />
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/grid.css">
+  <link rel="stylesheet" href="css/elements.css">
+  <link rel="stylesheet" href="css/prettyPhoto.css">
+</head>
 
-<html lang="en">
-	<head>
-		<meta chatset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="css/bootstrap.css">
-		<meta name="description" content="This is the official website of Davis Odom, a very cool guy!">
-		<meta name="author" content="Davis Odom">
-		<link rel="icon" href="img/favicon.ico">
-		<link href="css/jumbotron-narrow.css" rel="stylesheet">
-		
-		<title>Davis Odom</title>
-	</head>
-	
-	<body>
-		<div class="container">
-			<div class="header">
-				<ul class="nav nav-pills pull-right">
-					<li class="active"><a href="index.html">Home</a></li>
-					<li><a href="portfolio.html">Portfolio</a></li>
-					<li><a href="contact.html">Contact</a></li>
-				</ul>
-				<h3 class="text-muted">Davis Odom</h3>
-			</div>
-			
-			<div class="jumbotron">
-				<h2>About Me</h2>
-				<h3>Professional Stuff</h3>
-				<p>I am a student/software developer from Marietta, GA with experience in multiple languages in many applications.  
-				I have worked on apps, games, and even robots!  You can see some of my work on my <a href="portfolio.html">portfolio page</a>. 
-				I focus primarily on making video games, but I love to create things and often work on projects that are totally different. 
-				</p>
-				<br>
-				<h3>Not Professional Stuff</h3>
-				<p>I am currently a Junior in High School and I am Dual Enrolled at Kennesaw State University.  I enjoy playing video games
-				(of course) and binge watching TV shows on Netflix.  As well as meeting new people and learning new things.</p>
-			</div>
-		</div>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script src="js/bootstrap.js"></script>
-	</body>
+<body>
+<div id="content">
+
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="logo"><h2>Davis<strong> Odom</strong></h2></div>
+    <div class="menubutton"></div>
+
+    <div class="menu">
+      <ul>
+        <li id="default"><a href="#homepage">Home</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <br class="clear" />
+  </div>
+
+
+
+  <!-- HOMEPAGE -->
+  <div class="wrapper homepage" id="homepage">
+    <div class="container">
+      <div class="three columns">       
+        <div class="frame">
+          <img src="img/profile.jpg">
+        </div>
+      </div>
+      
+      <div class="five columns">
+        <h1>I Make Awesome Games!</h1>
+        <p><strong>I am a student/video game developer from Marietta, GA with experience in multiple languages in many applications.</strong></p>
+        <p>I have worked on apps, games, and even robots! You can see some of my work on my portfolio page. I focus primarily on making video games, 
+		but I love to create things and occasionally work on projects that are totally different.</p>
+      </div>
+      
+      <div class="four columns">
+        <div class="left-divider">
+          <p>Follow Me!<p>       
+          <a href="https://twitter.com/deavisdude"><button class="twitter">@deavisdude</button></a>
+          <a href="https://www.facebook.com/davis.odom.14"><button class="facebook">Davis Odom</button></a>
+          <a href="www.linkedin.com/in/davisodom/"><button class="linkedin">Davis Odom</button></a>
+          <a href="mailto:me@davisodom.com"><button class="mail">me@davisodom.com</button></a>
+        </div>
+      </div>
+
+   </div>
+  </div>
+
+
+
+  <!-- PORTFOLIO -->
+  <div class="wrapper portfolio" id="portfolio">
+    <span class="big-text">portfolio</span>
+    <div class="container">
+      <div class="twelve columns slogan">
+        <h5>Look at all those awesome games!</h5>
+      </div>
+
+      <div class="items">      
+        <div class="twelve columns">
+          
+          <a href="img/portfolio/support/gameplay.jpeg" rel="prettyPhoto" title="The player builds a support group in order to overcome the obstacle.  
+		  Music is procedural and colors show emotional themes throughout the game.">
+            <div class="item">
+              <img src="img/portfolio/support/main.jpeg">
+                <div class="mask">
+                <h6>Support</h6>
+                <p>A non-violent video game with themes of teen mental and emotional health. </p>
+                <span class="tags">game jam / serious / mental health</span>
+                </div>
+            </div>
+          </a>
+		  
+		  <a href="img/portfolio/flux/gameplay.png" rel="prettyPhoto" title="The player fights HIV as a nano-bot in the bloodstream fighting 
+		  bosses such as the Contaminated Needle with real treatments as powerups.">
+            <div class="item">
+              <img src="img/portfolio/flux/main.png">
+                <div class="mask">
+                <h6>Flux</h6>
+                <p>A bullet-hell game where you play a nano-bot in a battle with HIV</p>
+                <span class="tags">game jam / health / arcade</span>
+                </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+   </div>
+  </div>
+
+
+
+  <!-- BLOG -->
+  <div class="wrapper blog" id="blog">
+    <span class="big-text">blog</span>
+    <div class="container">
+      
+        <div class="ten columns offset-by-two post-title">
+          <h5>Post title</h5>
+        </div>
+        <div class="two columns info">       
+          <span class="date">date</span>
+          <span class="author">author</span>
+          <span class="tags">tag</span>
+        </div>
+        <div class="ten columns post">
+          <img src="img/blogpostimage.jpg">
+          <p><strong>Bold text</strong></p>
+          <p>More text</p>
+          <a href="#_" class="readmore">Read more &rarr;</a>
+          <div class="more">
+            <p>Text after read more button</p>
+          </div>
+        </div>
+
+   </div>
+  </div>
+
+
+  <!-- RESUME -->
+  <div class="wrapper resume" id="resume">
+    <span class="big-text">resume</span>
+    <div class="container">
+      
+      <div class="eight columns">
+        
+        <div class="education">
+          <h5>Education</h5>
+
+          <div class="date">date</div>
+          <div class="info">
+            <div class="heading">
+              <h6>education title</h6>
+              <span class="place">location</span>
+            </div>
+            <p class="description">education description</p>
+          </div>
+
+        </div>
+ 
+        <div class="experience">
+          <h5>Experience</h5>
+
+          <div class="date">date</div>
+          <div class="info">
+            <div class="heading">
+              <h6>Your job/function</h6>
+              <span class="place">company</span>
+            </div>
+            <p class="description">job description</p>
+          </div>
+
+        </div>    
+
+      </div>
+
+      <div class="four columns">
+        <div class="left-padding">
+          <div class="skills">
+            <h5>Skills</h5>
+            <div class="skill-container">
+              <div class="skill" style="width: 65%;">Your skill (change percentage to the left)</div>
+            </div>
+          </div>
+
+          <a href="link to your resume"><button class="big">Download my resume</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- CONTACT -->
+  <div class="wrapper contact" id="contact">
+    <span class="big-text">contact</span>
+    <div class="container">
+      <div class="twelve columns">
+        <div class="map"><img src="img/yourcontactimage.jpg"></div>
+      </div>
+      <div class="four columns">
+        <h5>Contact info</h5>
+        <ul>
+          <li><strong>Name:</strong> Your name</li>
+          <li><strong>Address:</strong> Your address</li>
+          <li><strong>E-mail:</strong> you@youremail</li>
+          <li><strong>Phone:</strong> Your phone number</li>
+        </ul>
+
+      </div>
+      <div class="eight columns">
+      <form method="post" action="send.php" id="contactform">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" class="required" />
+ 
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email" class="required email"/>
+        
+        <label for="message">Message:</label>
+        <textarea name="message" id="message" class="required"></textarea>
+
+        <button type="submit" name="submit" value="Submit" class="submit-button">Send message</button>
+      </form>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- FOOTER -->
+  <div class="footer">
+    Copyright 2014 Davis Odom
+  </div>
+
+</div>
+
+<!-- Scripts -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="js/libs/respond.min.js"></script>
+<script src="js/libs/jquery.easytabs.min.js"></script>
+<script src="js/libs/jquery.prettyPhoto.js"></script>
+<script src="js/libs/jquery.validate.min.js"></script>
+<script src="js/script.js"></script>
+
+
+</body>
 </html>
