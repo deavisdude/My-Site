@@ -376,7 +376,7 @@ a:active, a:focus, button {
     content:'+';
 }
 
-.blog .tags:after {
+.blog .tags::after {
     content:'C';
 }
 
