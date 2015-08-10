@@ -11,7 +11,7 @@
         <div class="jumbotron">
             <h1>Units: {{units.toFixed(0)}} ({{ups.toFixed(1)}} u/s)</h1>
             <button class="btn" ng-click="increase(1)">Click!</button>
-            <button class="btn btn-danger" ng-click="auto = !auto">AI {{auto}}</button>
+            <button class="btn btn-danger" ng-click="auto = !auto">Toggle the AI</button>
             <p ng-show="auto">AI is Running</p>
             <p ng-show="!auto">AI is Off</p>
             <button class="btn btn-success" ng-click="addUnit(0)">{{clickers.CLICK1.name}} ({{clickers.CLICK1.increment}} u/s) for {{clickers.CLICK1.price.toFixed(0)}} units</button><p> {{clickers.CLICK1.count}} </p>
