@@ -2,6 +2,8 @@
     $scope.units = 0;
     $scope.ups = 0;
 
+    $scope.Math = window.Math;
+
     $scope.auto = true;
 
     $interval(function () { $scope.AutoPlay(); }, 1000/5);
