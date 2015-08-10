@@ -2,7 +2,9 @@
     $scope.units = 0;
     $scope.ups = 0;
 
-    $interval(function () { $scope.AutoPlay(); }, 1000);
+    $scope.auto = true;
+
+    $interval(function () { $scope.AutoPlay(); }, 1000/5);
 
     $scope.pricePercent = 1.15;
 
@@ -70,31 +72,33 @@
     var init = true;
 
     $scope.AutoPlay = function () {
-        if (init) {
-            for (var clicker in $scope.clickers) {
-                if ($scope.clickers[clicker].value < min.value) {
-                    min = $scope.clickers[clicker];
+        if ($scope.auto) {
+            if (init) {
+                for (var clicker in $scope.clickers) {
+                    if ($scope.clickers[clicker].value < min.value) {
+                        min = $scope.clickers[clicker];
+                    }
+                }
+                init = false;
+            }
+            if (!equality) {
+                if (best.value < min.value) {
+                    if ($scope.getClicker(best.index + 1) != null) {
+                        best = $scope.getClicker(best.index + 1);
+                    } else {
+                        equality = true;
+                    }
+                }
+            } else {
+                for (var clicker in $scope.clickers) {
+                    if ($scope.clickers[clicker].value > best.value) {
+                        best = $scope.clickers[clicker];
+                    }
                 }
             }
-            init = false;
-        }
-        if (!equality) {
-            if (best.value < min.value) {
-                if ($scope.getClicker(best.index + 1) != null) {
-                    best = $scope.getClicker(best.index + 1);
-                } else {
-                    equality = true;
-                }
-            }
-        } else {
-            for (var clicker in $scope.clickers) {
-                if ($scope.clickers[clicker].value > best.value) {
-                    best = $scope.clickers[clicker];
-                }
-            }
-        }
 
 
-        $scope.addUnit(best.index);
+            $scope.addUnit(best.index);
+        }
     }
 }]);
