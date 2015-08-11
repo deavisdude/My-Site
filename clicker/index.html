@@ -3,6 +3,7 @@
 <head>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/ui-bootstrap-tpls-0.13.3.min.js"></script>
 
     <title>Clicker {{Math.floor(units)}} units</title>
 </head>
@@ -14,14 +15,43 @@
             <button class="btn btn-danger" ng-click="auto = !auto">Toggle the AI</button>
             <p ng-show="auto">AI is Running</p>
             <p ng-show="!auto">AI is Off</p>
-            <button class="btn btn-success" ng-click="addUnit(0)">{{clickers.CLICK1.name}} ({{clickers.CLICK1.increment}} u/s) for {{clickers.CLICK1.price.toFixed(0)}} units</button><p> {{clickers.CLICK1.count}} </p>
-            <button class="btn btn-success" ng-click="addUnit(1)">{{clickers.CLICK2.name}} ({{clickers.CLICK2.increment}} u/s) for {{clickers.CLICK2.price.toFixed(0)}} units</button><p> {{clickers.CLICK2.count}} </p>
-            <button class="btn btn-success" ng-click="addUnit(2)">{{clickers.CLICK3.name}} ({{clickers.CLICK3.increment}} u/s) for {{clickers.CLICK3.price.toFixed(0)}} units</button><p> {{clickers.CLICK3.count}} </p>
-            <button class="btn btn-success" ng-click="addUnit(3)">{{clickers.CLICK4.name}} ({{clickers.CLICK4.increment}} u/s) for {{clickers.CLICK4.price.toFixed(0)}} units</button><p> {{clickers.CLICK4.count}} </p>
-            <button class="btn btn-success" ng-click="addUnit(4)">{{clickers.CLICK5.name}} ({{clickers.CLICK5.increment}} u/s) for {{clickers.CLICK5.price.toFixed(0)}} units</button><p> {{clickers.CLICK5.count}} </p>
-            <button class="btn btn-success" ng-click="addUnit(5)">{{clickers.CLICK6.name}} ({{clickers.CLICK6.increment}} u/s) for {{clickers.CLICK6.price.toFixed(0)}} units</button><p> {{clickers.CLICK6.count}} </p>
-            <button class="btn btn-success" ng-click="addUnit(6)">{{clickers.CLICK7.name}} ({{clickers.CLICK7.increment}} u/s) for {{clickers.CLICK7.price.toFixed(0)}} units</button><p> {{clickers.CLICK7.count}} </p>
-            <button class="btn btn-success" ng-click="addUnit(7)">{{clickers.CLICK8.name}} ({{clickers.CLICK8.increment}} u/s) for {{clickers.CLICK8.price.toFixed(0)}} units</button><p> {{clickers.CLICK8.count}} </p>
+
+            <button class="btn btn-success" ng-click="addUnit(0)">{{clickers.CLICK1.name}} ({{clickers.CLICK1.increment}} u/s) for {{clickers.CLICK1.price.toFixed(0)}} units</button>
+            <progressbar animate="false" ng-show="isBest(clickers.CLICK1)" class="progress-striped active" max="clickers.CLICK1.price.toFixed(0)" value="Math.floor(units)"><span style="color:white; white-space:nowrap;">{{Math.floor(units)}} / {{clickers.CLICK1.price.toFixed(0)}}</span></progressbar>
+            <p> {{clickers.CLICK1.count}} </p>
+
+            <button class="btn btn-success" ng-click="addUnit(1)">{{clickers.CLICK2.name}} ({{clickers.CLICK2.increment}} u/s) for {{clickers.CLICK2.price.toFixed(0)}} units</button>
+            <progressbar animate="false" ng-show="isBest(clickers.CLICK2)" class="progress-striped active" max="clickers.CLICK2.price.toFixed(0)" value="Math.floor(units)"><span style="color:white; white-space:nowrap;">{{Math.floor(units)}} / {{clickers.CLICK2.price.toFixed(0)}}</span></progressbar>
+            <p> {{clickers.CLICK2.count}} </p>
+
+            <button class="btn btn-success" ng-click="addUnit(2)">{{clickers.CLICK3.name}} ({{clickers.CLICK3.increment}} u/s) for {{clickers.CLICK3.price.toFixed(0)}} units</button>
+            <progressbar animate="false" ng-show="isBest(clickers.CLICK3)" class="progress-striped active" max="clickers.CLICK3.price.toFixed(0)" value="Math.floor(units)"><span style="color:white; white-space:nowrap;">{{Math.floor(units)}} / {{clickers.CLICK3.price.toFixed(0)}}</span></progressbar>
+            <p> {{clickers.CLICK3.count}} </p>
+
+            <button class="btn btn-success" ng-click="addUnit(3)">{{clickers.CLICK4.name}} ({{clickers.CLICK4.increment}} u/s) for {{clickers.CLICK4.price.toFixed(0)}} units</button>
+            <progressbar animate="false" ng-show="isBest(clickers.CLICK4)" class="progress-striped active" max="clickers.CLICK4.price.toFixed(0)" value="Math.floor(units)"><span style="color:white; white-space:nowrap;">{{Math.floor(units)}} / {{clickers.CLICK4.price.toFixed(0)}}</span></progressbar>
+            <p> {{clickers.CLICK4.count}} </p>
+
+            <button class="btn btn-success" ng-click="addUnit(4)">{{clickers.CLICK5.name}} ({{clickers.CLICK5.increment}} u/s) for {{clickers.CLICK5.price.toFixed(0)}} units</button>
+            <progressbar animate="false" ng-show="isBest(clickers.CLICK5)" class="progress-striped active" max="clickers.CLICK5.price.toFixed(0)" value="Math.floor(units)"><span style="color:white; white-space:nowrap;">{{Math.floor(units)}} / {{clickers.CLICK5.price.toFixed(0)}}</span></progressbar>
+            <p> {{clickers.CLICK5.count}} </p>
+
+            <button class="btn btn-success" ng-click="addUnit(5)">{{clickers.CLICK6.name}} ({{clickers.CLICK6.increment}} u/s) for {{clickers.CLICK6.price.toFixed(0)}} units</button>
+            <progressbar animate="false" ng-show="isBest(clickers.CLICK6)" class="progress-striped active" max="clickers.CLICK6.price.toFixed(0)" value="Math.floor(units)"><span style="color:white; white-space:nowrap;">{{Math.floor(units)}} / {{clickers.CLICK6.price.toFixed(0)}}</span></progressbar>
+            <p> {{clickers.CLICK6.count}} </p>
+
+            <button class="btn btn-success" ng-click="addUnit(6)">{{clickers.CLICK7.name}} ({{clickers.CLICK7.increment}} u/s) for {{clickers.CLICK7.price.toFixed(0)}} units</button>
+            <progressbar animate="false" ng-show="isBest(clickers.CLICK7)" class="progress-striped active" max="clickers.CLICK7.price.toFixed(0)" value="Math.floor(units)"><span style="color:white; white-space:nowrap;">{{Math.floor(units)}} / {{clickers.CLICK7.price.toFixed(0)}}</span></progressbar>
+            <p> {{clickers.CLICK7.count}} </p>
+
+            <button class="btn btn-success" ng-click="addUnit(7)">{{clickers.CLICK8.name}} ({{clickers.CLICK8.increment}} u/s) for {{clickers.CLICK8.price.toFixed(0)}} units</button>
+            <progressbar animate="false" ng-show="isBest(clickers.CLICK8)" class="progress-striped active" max="clickers.CLICK8.price.toFixed(0)" value="Math.floor(units)"><span style="color:white; white-space:nowrap;">{{Math.floor(units)}} / {{clickers.CLICK8.price.toFixed(0)}}</span></progressbar>
+            <p> {{clickers.CLICK8.count}} </p>
+
+            <br />
+
+            <button class="btn btn-warning" ng-click="quickStart()">I'm a Cheater!</button>
+            
         </div class="jumbotron">
     </div>
 
