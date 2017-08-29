@@ -41,6 +41,8 @@
 
   <link rel="stylesheet" href="css/prettyPhoto.css">
 
+  <script src='https://www.google.com/recaptcha/api.js'></script>
+
 </head>
 
 
@@ -546,7 +548,9 @@
 
         <textarea name="message" id="message" class="required"></textarea>
 
+        <div class="g-recaptcha" data-sitekey="6LcPoS4UAAAAAKeyQCRIKRrpz9_5cohcvYd9aGlX" data-callback="recaptchaCallback"></div>
 
+        <br/>
 
         <button type="submit" name="submit" value="Submit" class="submit-button">Send message</button>
 
